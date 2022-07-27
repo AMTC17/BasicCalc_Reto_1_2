@@ -9,7 +9,7 @@ import clases.ClsCalc;
 
 /**
  *
- * @author Mauricio
+ * @author Andres Mauricio Trujillo
  */
 public class BasicCalc_Reto_1_2 {
 
