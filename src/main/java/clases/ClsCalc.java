@@ -76,7 +76,7 @@ public class ClsCalc {
             if(option.equals("1")){
                 
                 String [] operaciones = {"Suma", "Resta", "Multiplicacion", 
-                    "Division", "Raiz cuadrada","Regresar al inicio"};
+                    "Division","Potencia", "Raiz cuadrada","Regresar al inicio"};
             
                 String operacion = (String) JOptionPane.showInputDialog(null, "Selecciona una operacion","operaciones",
                         JOptionPane.QUESTION_MESSAGE,null,operaciones,operaciones[0]);
@@ -93,8 +93,7 @@ public class ClsCalc {
                         double resu = Math.round(suma * 100.0) / 100.0;
                         JOptionPane.showMessageDialog(null, "El resultado  es: " + resu);
                         break;
-                        
-                        
+                                                
                     case "Resta":
                         numero1 = Double.parseDouble(JOptionPane.showInputDialog("ingrese el primer numero"));
                         numero2 = Double.parseDouble(JOptionPane.showInputDialog("ingrese el segundo numero"));
@@ -128,7 +127,15 @@ public class ClsCalc {
                         double sqr = Math.sqrt(numero1);
                         double resu5 = Math.round(sqr * 100.0) / 100.0;
                         JOptionPane.showMessageDialog(null, "El resultado  es: " + resu5);
-                        break;    
+                        break;
+                        
+                    case "Potencia":
+                        numero1 = Double.parseDouble(JOptionPane.showInputDialog("ingrese el primer numero"));
+                        numero2 = Double.parseDouble(JOptionPane.showInputDialog("ingrese el segundo numero"));
+                        double pot = Math.pow(numero1,numero2);
+                        double resu6 = Math.round(pot * 100.0) / 100.0;
+                        JOptionPane.showMessageDialog(null, "El resultado  es: " + resu6);
+                        break; 
                         
                 }
                 }catch(Exception e){JOptionPane.showMessageDialog(null,"El valor ingresado no es numerico");}
