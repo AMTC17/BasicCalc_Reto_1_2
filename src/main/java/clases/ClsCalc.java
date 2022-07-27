@@ -81,15 +81,19 @@ public class ClsCalc {
                 String operacion = (String) JOptionPane.showInputDialog(null, "Selecciona una operacion","operaciones",
                         JOptionPane.QUESTION_MESSAGE,null,operaciones,operaciones[0]);
                 
+                try{
+                
                 switch (operacion){
                     
                     case "Suma":
                         numero1 = Double.parseDouble(JOptionPane.showInputDialog("ingrese el primer numero"));
                         numero2 = Double.parseDouble(JOptionPane.showInputDialog("ingrese el segundo numero"));
+                        
                         double suma = numero1 + numero2;
                         double resu = Math.round(suma * 100.0) / 100.0;
                         JOptionPane.showMessageDialog(null, "El resultado  es: " + resu);
                         break;
+                        
                         
                     case "Resta":
                         numero1 = Double.parseDouble(JOptionPane.showInputDialog("ingrese el primer numero"));
@@ -126,10 +130,8 @@ public class ClsCalc {
                         JOptionPane.showMessageDialog(null, "El resultado  es: " + resu5);
                         break;    
                         
-                        
-                        
                 }
-            
+                }catch(Exception e){JOptionPane.showMessageDialog(null,"El valor ingresado no es numerico");}
             }
         }while(!option.equals("2"));
   
